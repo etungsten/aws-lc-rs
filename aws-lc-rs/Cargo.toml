@@ -1,7 +1,7 @@
 [package]
 name = "aws-lc-rs"
 authors = ["AWS-LibCrypto"]
-version = "1.4.0"
+version = "0.16.20"
 edition = "2021"
 rust-version = "1.60"
 keywords = ["crypto", "cryptography", "security"]
@@ -24,7 +24,7 @@ exclude = [
 
 [features]
 alloc = []
-default = ["aws-lc-sys", "alloc", "ring-io", "ring-sig-verify"]
+default = ["aws-lc-sys", "alloc", "ring-io", "ring-sig-verify", "fips"]
 ring-io = ["dep:untrusted"]
 ring-sig-verify = ["dep:untrusted"]
 bindgen = ["aws-lc-sys?/bindgen", "aws-lc-fips-sys?/bindgen"]
